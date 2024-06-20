@@ -1,0 +1,36 @@
+/* Custom CSS */
+.top-nav {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.top-nav li {
+    display: inline;
+}
+
+.top-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.top-nav a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+    .top-nav {
+        display: block;
+        text-align: center;
+    }
+
+    .top-nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .bg-dark {
+        text-align: center;
+    }
+}

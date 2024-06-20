@@ -69,7 +69,7 @@ if (isset($_POST['checkout'])) {
     <?php
     require_once 'partikel/head.php'
     ?>
-
+</head>
 <body>
     <div class="container-fluid">
 
@@ -158,7 +158,7 @@ if (isset($_POST['checkout'])) {
                                                     <tr>
                                                         <th colspan="3">
                                                             Upload Bukti Pembayaran
-                                                            <div id="emailHelp" class="form-text h6">(kosongkan jika metode pembayaran COD)</div>
+                                                            <div id="emailHelp" class="form-text h6">( kosongkan dan hubungi admin <br> jika metode pembayaran COD )</div>
                                                         </th>
                                                         <th colspan="2">
                                                             <input class="form-control form-control-sm" id="formFileSm" name="upload_bukti" type="file" required>
@@ -167,7 +167,7 @@ if (isset($_POST['checkout'])) {
                                                     <tr>
                                                         <td colspan="5" class="text-center">
                                                             Harap melampirkan bukti pembayaran sebelum menekan tombol Selesaikan Pembayaran.
-                                                            <div>Jika tidak melampirkan bukti pembayaran maka otomatis pesanan anda akan ditolak.</div>
+                                                            <div>Jika tidak melampirkan bukti pembayaran maka otomatis pesanan anda akan DITOLAK.</div>
                                                         </td>
                                                     </tr>
                                                 </tfoot>

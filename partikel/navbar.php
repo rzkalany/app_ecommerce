@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Dropdown</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
 <div class="col-12">
     <header class="row">
         <!-- Top Nav -->
@@ -6,47 +16,28 @@
                 <div class="col-auto me-auto">
                     <ul class="top-nav">
                         <li>
-                            <a href="tel:+628978826548"><i class="fa fa-phone-square me-2"></i>+628978826548</a>
+                            <a href="tel:+628978826548">&nbsp;&nbsp;&nbsp;<i class="fa fa-phone-square me-2"></i>+628978826548&nbsp;&nbsp;&nbsp;</a>
                         </li>
                         <li>
-                            <a href="mailto:rizkamaelani0504@gmail.com"><i class="fa fa-envelope me-2"></i>rizkamaelani0504@gmail.com</a>
+                            <a href="mailto:rizkamaelani0504@gmail.com">&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope me-2"></i>rizkamaelani0504@gmail.com&nbsp;&nbsp;&nbsp;</a>
                         </li>
-                    </ul>
-                </div>
-                <div class="col-auto">
-                    <ul class="top-nav">
-                        <?php if (!isset($_SESSION['login'])) : ?>
-                            <li>
-                                <a href="<?= $base_url ?>auth/register.php"><i class="fas fa-user-edit me-2"></i>Register</a>
-                            </li>
-                            <li>
-                                <a href="<?= $base_url ?>auth/login.php"><i class="fas fa-sign-in-alt me-2"></i>Login</a>
-                            </li>
-                        <?php else : ?>
-                            <li>
-                                <a href="<?= $base_url ?>auth/ganti_password.php"><i class="fas fa-key me-2"></i>Ganti Password</a>
-                            </li>
-                            <li>
-                                <a href="<?= $base_url ?>auth/logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a>
-                            </li>
-                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- Top Nav -->
 
-        <!-- Header -->
-        <div class="col-12 bg-white pt-4">
-            <div class="row">
-                <div class="col-lg-auto">
-                    <div class="site-logo text-center text-lg-left">
-                        <a href="<?= $base_url ?>">YPA.CO Beauty</a>
-                    </div>
+    <!-- Header -->
+    <div class="col-12 bg-white pt-4">
+        <div class="row">
+            <div class="col-lg-auto">
+                <div class="site-logo text-center text-lg-left">
+                    <a href="<?= $base_url ?>">YPA.CO Beauty</a>
                 </div>
+            </div>
             
-                <div class="col-lg-auto ms-auto text-center text-lg-left header-item-holder">
-                    <?php
+            <div class="col-lg-auto ms-auto text-center text-lg-left header-item-holder">
+                <?php
                     if (isset($_SESSION['login'])) {
                         $id_user = $_SESSION['id'];
                         $cariKeranjang = mysqli_query($koneksi, "SELECT * FROM `tb_cart` WHERE `id_user` = '$id_user' AND `status` = 'cart'");
@@ -59,51 +50,75 @@
                     }
                     ?>
                     <?php if (!isset($_SESSION['login'])) : ?>
-                    <?php else : ?>
-                        <a href="<?= $base_url ?>cart.php" class="header-item">
-                            <i class="fas fa-shopping-bag me-2"></i><span id="header-qty" class="me-3"><?= $getRow ?></span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-            </div>
-
-            <!-- Nav -->
-            <div class="row">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white col-12">
-                    <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="mainNav">
-                        <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="<?= $base_url ?>">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="electronics" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategori Menu</a>
-                                <div class="dropdown-menu" aria-labelledby="electronics">
-                                    <?php
-                                    $menu = mysqli_query($koneksi, "SELECT * FROM `tb_kategori` ORDER BY `tb_kategori`.`nama_kategori` ASC");
-                                    foreach ($menu as $key) :
-                                    ?>
-                                        <a class="dropdown-item" href="<?= $base_url ?>"><?= $key['nama_kategori'] ?></a>
-                                    <?php endforeach; ?>
-                                </div>
-                            </li> -->
-                            <?php if (!isset($_SESSION['login'])) : ?>
-
-                            <?php else : ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?= $base_url ?>history.php">History Pesanan </a>
-                                </li>
+                        <?php else : ?>
+                            <a href="<?= $base_url ?>cart.php" class="header-item">
+                                <i class="fas fa-shopping-bag me-2"></i><span id="header-qty" class="me-3"><?= $getRow ?></span>
+                            </a>
                             <?php endif; ?>
+                        </div>
+                    </div>  
+                <!-- Flex container for horizontal layout -->
+                    <div class="d-flex justify-content-between mt-4 mb-4">
+
+                    <!-- About Dropdown -->
+                    <div class="dropdown">
+                        <a class="btn btn-pink dropdown-toggle" href="#" role="button" id="dropdownMenuLink1" data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuLink1">
+                            <li><a class="dropdown-item" href="tel:+628978826548">Contact us</a></li>
+                            <li><a class="dropdown-item" href="mailto:rizkamaelani0504@gmail.com">Gmail us</a></li>
+                            <li><a class="dropdown-item" href="https://www.instagram.com/ypa.co_beauty/">Instagram</a></li>
+                            <li><a class="dropdown-item" href="https://www.tiktok.com/@ypa.cobeauty">Tiktok</a></li>
                         </ul>
                     </div>
-                </nav>
+                    <!-- End About Dropdown -->
+
+                    <!-- Account Dropdown -->
+                    <div class="dropdown">
+                        <a class="btn btn-pink dropdown-toggle" href="#" role="button" id="dropdownMenuLink2" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuLink2">
+                        <?php if (!isset($_SESSION['login'])) : ?>
+                        <li><a class="dropdown-item" href="<?= $base_url ?>auth/register.php"><i class="fas fa-user-edit me-2"></i>Register</a></li>
+                        <li><a class="dropdown-item" href="<?= $base_url ?>auth/login.php"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
+                        <?php else : ?>
+                            <li><a class="dropdown-item" href="<?= $base_url ?>auth/ganti_password.php"><i class="fas fa-key me-2"></i>Ganti Password</a></li>
+                            <li><a class="dropdown-item" href="<?= $base_url ?>auth/logout.php"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        <?php endif; ?>
+                        </ul>
+                    </div>
+                    <!-- End Account Dropdown -->
+
+                    </div>
+
+                    
+                    <!-- Nav -->
+                    <div class="row">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-white col-12">
+                            <button class="navbar-toggler d-lg-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="mainNav">
+                                <ul class="navbar-nav mx-auto mt-3 mt-lg-0">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="<?= $base_url ?>">- Home -<span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <?php if (!isset($_SESSION['login'])) : ?>
+                                        <?php else : ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?= $base_url ?>history.php">- History Pesanan - </a>
+                                        </li>
+                                        <?php endif; ?>
+                                    </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Header -->
+                    
+                </header>
             </div>
-            <!-- Nav -->
-
-        </div>
-        <!-- Header -->
-
-    </header>
-</div>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>

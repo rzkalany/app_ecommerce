@@ -53,6 +53,19 @@ if (isset($_POST['submit'])) {
     <?php
     require_once '../partikel/head.php';
     ?>
+    <style>
+    .btn-pink {
+        background-color: #d63384; 
+        color: #fff; 
+        border-color: #ff69b4; 
+        transition: background-color 0.3s ease; 
+    }
+
+    .btn-pink:hover {
+        background-color: white;
+        border-color: #ffb0b9; 
+    }
+</style>
 </head>
 
 <body>
@@ -87,7 +100,7 @@ if (isset($_POST['submit'])) {
                                         <button type="submit" name="submit" class="btn btn-outline-dark w-100">Login</button>
                                     </div>
                                     <div class="mb-3 text-end">
-                                        <a href="<?= $base_url ?>auth/lupa_password.php" class="text-decoration-none text-secondary">Lupa Password</a>
+                                    <a href="<?= $base_url ?>auth/lupa_password.php" class="btn btn-pink">Lupa Password</a>
                                     </div>
                                 </form>
                             </div>
