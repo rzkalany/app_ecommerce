@@ -5,38 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Dropdown</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        <style>
+        #welcomeMessage {
+            font-size: 28px; /* Increase font size */
+            font-weight: bold; /* Make text bold */
+            color: white; /* Optional: change text color to white for better contrast on dark background */
+            margin-top: 10px; /* Add margin to the top */
+            margin-bottom: 10px; /* Add margin to the bottom */
+        }
+
+        .header-text {
+            font-size: 28px; /* Default font size for larger screens */
+            font-weight: bold; /* Make text bold */
+            color: white; /* Text color */
+            white-space: nowrap; /* Prevent text from wrapping */
+            overflow: hidden; /* Hide overflow */
+            display: inline-block;
+            animation: scroll 13s linear infinite; /* Animation */
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-text {
+                font-size: 24px; /* Smaller font size for tablets */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header-text {
+                font-size: 20px; /* Smaller font size for mobile phones */
+            }
+        }
+
+    </style>
 </head>
+
 <body>
-
-<div class="col-12">
-    <header class="row">
-        <!-- Top Nav -->
-        <div class="col-12 bg-dark py-2 d-md-block d-none">
-            <div class="row">
-                <div class="col-auto me-auto">
-                    <ul class="top-nav">
-                        <li>
-                            <a href="tel:+628978826548">&nbsp;&nbsp;&nbsp;<i class="fa fa-phone-square me-2"></i>+628978826548&nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                        <li>
-                            <a href="mailto:rizkamaelani0504@gmail.com">&nbsp;&nbsp;&nbsp;<i class="fa fa-envelope me-2"></i>rizkamaelani0504@gmail.com&nbsp;&nbsp;&nbsp;</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Top Nav -->
-
+    
     <!-- Header -->
+            <div class="col-12 bg-dark py-3">
+                    <p class="header-text" id="welcomeMessage">Welcome to our shop at YPA.CO BEAUTY, happy shopping....</p>
+            </div>
+
     <div class="col-12 bg-white pt-4">
-        <div class="row">
             <div class="col-lg-auto">
                 <div class="site-logo text-center text-lg-left">
                     <a href="<?= $base_url ?>">YPA.CO Beauty</a>
-                </div>
             </div>
+
             
             <div class="col-lg-auto ms-auto text-center text-lg-left header-item-holder">
+        
                 <?php
                     if (isset($_SESSION['login'])) {
                         $id_user = $_SESSION['id'];
@@ -119,6 +144,31 @@
                     
                 </header>
             </div>
+        </script>
+        <!-- Include Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        <!-- JavaScript for typing effect -->
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const message = "Welcome to our shop at YPA.CO BEAUTY, happy shopping....";
+                let index = 0;
+                const speed = 100; // Adjust typing speed here (in milliseconds)
+                
+                function typeWriter() {
+                    if (index < message.length) {
+                        document.getElementById("welcomeMessage").innerHTML += message.charAt(index);
+                        index++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+                
+                typeWriter();
+            });
+            
+
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>

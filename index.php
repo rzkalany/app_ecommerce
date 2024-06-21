@@ -11,20 +11,18 @@ $resultProduct = mysqli_query($koneksi, "SELECT * FROM `tb_produk` INNER JOIN `t
         <?php
         require_once 'partikel/head.php'
         ?>
+        
+    </style>
     </head>
 
     <body>
         <div class="container-fluid">
 
-            <div class="row min-vh-100">
+            <div class="row min-vh-50">
                 <?php
                 require_once 'partikel/navbar.php';
                 ?>
-
-                <div class="col-12">
-                    <!-- Main Content -->
-                    <main class="row">
-
+                
                         <!-- Produk -->
                         <div class="col-12">
                             <div class="row">
@@ -90,3 +88,4 @@ $resultProduct = mysqli_query($koneksi, "SELECT * FROM `tb_produk` INNER JOIN `t
     </body>
 
 </php>
+
