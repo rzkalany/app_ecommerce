@@ -8,7 +8,7 @@
     <style>
         <style>
         #welcomeMessage {
-            font-size: 28px; /* Increase font size */
+            font-size: 20px; /* Increase font size */
             font-weight: bold; /* Make text bold */
             color: white; /* Optional: change text color to white for better contrast on dark background */
             margin-top: 10px; /* Add margin to the top */
@@ -16,7 +16,7 @@
         }
 
         .header-text {
-            font-size: 28px; /* Default font size for larger screens */
+            font-size: 20px; /* Default font size for larger screens */
             font-weight: bold; /* Make text bold */
             color: white; /* Text color */
             white-space: nowrap; /* Prevent text from wrapping */
