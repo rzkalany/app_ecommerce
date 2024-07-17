@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<<<<<<< HEAD
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bootstrap Dropdown</title>
@@ -65,32 +63,7 @@
         border: 1px solid #ddd;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-=======
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Dropdown</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        <style>
-        #welcomeMessage {
-            font-size: 20px; /* Increase font size */
-            font-weight: bold; /* Make text bold */
-            color: white; /* Optional: change text color to white for better contrast on dark background */
-            margin-top: 10px; /* Add margin to the top */
-            margin-bottom: 10px; /* Add margin to the bottom */
         }
-
-        .header-text {
-            font-size: 20px; /* Default font size for larger screens */
-            font-weight: bold; /* Make text bold */
-            color: white; /* Text color */
-            white-space: nowrap; /* Prevent text from wrapping */
-            overflow: hidden; /* Hide overflow */
-            display: inline-block;
-            animation: scroll 13s linear infinite; /* Animation */
->>>>>>> b22c6c75544bb95a86d7d63c61c813c4e18d7640
-        }
-
         .separator {
         border: 0.5px solid black;
         width: 30%;
@@ -268,9 +241,3 @@
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-<<<<<<< HEAD
-
-
-        
-=======
->>>>>>> b22c6c75544bb95a86d7d63c61c813c4e18d7640
