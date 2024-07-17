@@ -50,7 +50,7 @@
             <span>Kelola Pelanggan</span></a>
     </li>
 
-    <!-- <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" href="<?= $base_url ?>dashboard/kelola-staff">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Kelola Staff</span></a>
@@ -60,11 +60,11 @@
         <a class="nav-link" href="<?= $base_url ?>dashboard/kelola-website">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Kelola Website</span></a>
-    </li> -->
+    </li>
 
     <hr class="sidebar-divider">
 
-    <!-- <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link" target="_blank" href="<?= $base_url ?>dashboard/report/report-penjualan.php">
             <i class="fas fa-fw fa-file"></i>
             <span>Laporan Penjualan</span></a>
@@ -83,7 +83,7 @@
         <a class="nav-link" target="_blank" href="<?= $base_url ?>dashboard/report/report-pengiriman.php">
             <i class="fas fa-fw fa-file"></i>
             <span>Laporan Pengiriman</span></a>
-    </li> -->
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

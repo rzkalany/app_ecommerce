@@ -47,6 +47,10 @@ require_once '../config/koneksi.php';
             </div>
             <!-- End of Main Content -->
 
+            <?php
+            require_once '../partikel/report/report-product.php'
+            ?>
+
             <!-- Footer -->
             <?php
             require_once '../partikel/footer-admin.php'

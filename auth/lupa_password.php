@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="container-fluid">
-        <div class="row min-vh-100">
-            <?php require_once '../partikel/navbar.php'; ?>
+        <div class="row min-vh-50">
+            <?php require_once '../partikel/navbarauth.php'; ?>
 
             <div class="col-12">
                 <!-- Main Content -->

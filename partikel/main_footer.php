@@ -64,7 +64,7 @@
                     <i class="fas fa-check"></i>
                 </div>
                 <div class="col-auto me-auto large-text">
-                    Produk Asli
+                    Produk Berkualitas
                 </div>
             </div>
         </div>
