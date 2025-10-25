@@ -366,3 +366,86 @@ table td img {
     }
 
 }
+
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Kotak utama konten */
+    .content-box {
+        max-width: 900px;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Garis pemisah warna pink */
+    .separator {
+        border: none;
+        height: 2px;
+        background-color: #ff66b2; /* warna pink lembut */
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    /* Judul utama warna pink */
+    .title {
+        text-align: center;
+        color: black;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .section-title {
+        color: #222;
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    .justified-text p,
+    .justified-text li {
+        text-align: justify;
+        line-height: 1.7;
+        font-size: 1rem;
+        color: #444;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    /* Responsif tablet */
+    @media (max-width: 768px) {
+        .content-box {
+        padding: 20px;
+        margin: 0 15px;
+        }
+
+        .title {
+        font-size: 1.6rem;
+        }
+    }
+
+    /* Responsif HP */
+    @media (max-width: 480px) {
+        .content-box {
+        padding: 15px;
+        }
+
+        .title {
+        font-size: 1.3rem;
+        }
+
+        .justified-text p,
+        .justified-text li {
+        font-size: 0.95rem;
+        }
+    }

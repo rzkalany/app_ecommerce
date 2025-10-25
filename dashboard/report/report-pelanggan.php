@@ -81,6 +81,11 @@ function hari_ini()
 
 <head>
     <title>Report E-Commerce</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -108,9 +113,9 @@ function hari_ini()
         </tbody>
     </table>
     <div style="position: absolute; bottom: 100px;width: 100%; margin-right: 100px; text-align: right;">
-        Jakarta, <?= hari_ini() . " " .  tgl_indo(date('Y-m-d')) ?>
+        Karawang, <?= hari_ini() . " " .  tgl_indo(date('Y-m-d')) ?>
         <div style="margin-right: 50px;">Mengetahui,</div>
-        <div style="margin-top: 100px; margin-right: 50px;">PT TingTong</div>
+        <div style="margin-top: 100px; margin-right: 50px;">YPA.CO BEAUTY</div>
     </div>
 </body>
 

@@ -73,9 +73,9 @@ if (isset($_POST['checkout'])) {
 <body>
     <div class="container-fluid">
 
-        <div class="row min-vh-100">
+        <div class="row min-vh-50">
             <?php
-            require_once 'partikel/navbar.php';
+            require_once 'partikel/navbarauth.php';
             ?>
 
             <div class="col-12">

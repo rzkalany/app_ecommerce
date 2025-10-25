@@ -70,9 +70,9 @@ if (isset($_POST['submit'])) {
 
 <body>
     <div class="container-fluid">
-        <div class="row min-vh-100">
+        <div class="row min-vh-50">
             <?php
-            require_once '../partikel/navbar.php';
+            require_once '../partikel/navbarauth.php';
             ?>
 
             <div class="col-12">
@@ -100,7 +100,8 @@ if (isset($_POST['submit'])) {
                                         <button type="submit" name="submit" class="btn btn-outline-dark w-100">Login</button>
                                     </div>
                                     <div class="mb-3 text-end">
-                                    <a href="<?= $base_url ?>auth/lupa_password.php" class="btn btn-pink">Lupa Password</a>
+                                        <a href="<?= $base_url ?>auth/lupa_password.php" class="btn btn-pink">Lupa Password</a>
+                                        <Register href="<?= $base_url ?>auth/register.php"class="btn btn-pink">Daftar</a>
                                     </div>
                                 </form>
                             </div>

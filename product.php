@@ -25,6 +25,8 @@ if (isset($_POST['addproduct'])) {
 
     if ($getRow > 0) {
         $cekBarang = mysqli_query($koneksi, "SELECT * FROM `tb_detail_order` WHERE `id_product` = '$id' AND `id_order` = '$getIDOrder'");
+        // var_dump($cekBarang);
+        // return;
         $getBarang = mysqli_num_rows($cekBarang);
         $fetchBarang = mysqli_fetch_assoc($cekBarang);
         $getQTY = $fetchBarang['qty'];
@@ -69,8 +71,10 @@ if (isset($_POST['addproduct'])) {
     } else {
         // Generate ID ORDER
         $id_order = crypt(rand(22, 999), time());
+        echo "$id_order";
 
-        $addCart = mysqli_query($koneksi, "INSERT INTO `tb_cart`(`id_order`, `id_user`) VALUES ('$id_order','$id_user')");
+        $addCart = mysqli_query($koneksi, "INSERT INTO `tb_cart` (`id_order`, `id_user`) VALUES ('$id_order','$id_user')");
+
         if ($addCart > 0) {
             $addDetailOrder = mysqli_query($koneksi, "INSERT INTO `tb_detail_order`(`id_order`, `id_product`, `qty`) VALUES ('$id_order','$id','$qty')");
             if ($addDetailOrder > 0) {
@@ -107,7 +111,7 @@ if (isset($_POST['addproduct'])) {
 
         <div class="row min-vh-50">
             <?php
-            require_once 'partikel/navbar.php';
+            require_once 'partikel/navbarauth.php';
             ?>
 
             <div class="col-12">

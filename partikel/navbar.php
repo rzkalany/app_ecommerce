@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bootstrap Dropdown</title>
@@ -56,7 +55,7 @@
         justify-content: center;
         text-align: center;
         color: #101010;
-        max-width: 100%;
+        max-width: 200%;
         width: 98%;
         margin: 10px;
         padding: 70px;
@@ -101,7 +100,6 @@
         }
         }
 </style>
-</head>
 
 <body>
         <!-- Header -->
@@ -162,7 +160,6 @@
                                 </a>
                                 <ul class="dropdown-menu p-3" aria-labelledby="dropdownMenuLink2">
                                 <?php if (!isset($_SESSION['login'])) : ?>
-                                <li><a class="dropdown-item" href="<?= $base_url ?>auth/register.php"><i class="fas fa-user-edit me-2"></i>Register</a></li>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>auth/login.php"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
                                 <?php else : ?>
                                 <li><a class="dropdown-item" href="<?= $base_url ?>auth/ganti_password.php"><i class="fas fa-key me-2"></i>Ganti Password</a></li>
@@ -171,22 +168,6 @@
                                 </ul>
                         </div>
                         <!-- End Account Dropdown -->
-                        </div>
-
-                        <div class="content">
-                        <hr class="separator">
-                        <h2 class="title">Mengenal Produk Kami</h2>
-                        <hr class="separator">
-                        <div class="justified-text">
-                        <h3 class="section-title">Nikmati Keindahan Perawatan Alami</h3>
-                        <p>Di YPA.CO BEAUTY, kami percaya pada kekuatan alam untuk merawat kulit Anda dan meningkatkan kilau alami Anda. Produk perawatan tubuh kami dibuat dengan cermat menggunakan bahan-bahan berkualitas, memastikan sentuhan lembut namun efektif pada kulit Anda.</p>
-                        </div>
-                        <div class="justified-text">
-                        <h3 class="section-title">Manjakan diri Anda dengan rangkaian Bodycare kami:</h3>
-                        <ul>
-                                <li>Body Lotion mengandung SPF 30+++ yang membantu menjaga kulit dari paparan sinar matahari yang buruk, moisturizing, brightening, niacinamide, alpha arbutin, aloe vera, dan honey, melembapkan kulit, tidak lengket, dan menjadikan kulit sehat, cerah, dan lembut.</li>
-                                <li>Body scrub mengandung honey, collagen, hydrogenated coconut oil, dan citric acid, yang membantu melembapkan kulit, mencerahkan, dan membersihkan kotoran yang menempel pada kulit, menjadikan kulit cerah maksimal dan permanen.</li>
-                        </ul>
                         </div>
                 </div>
 
@@ -243,6 +224,3 @@
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-
-
-        

@@ -11,8 +11,8 @@ $resultProduct = mysqli_query($koneksi, "SELECT * FROM `tb_produk` INNER JOIN `t
         <?php
         require_once 'partikel/head.php'
         ?>
-        
-    </style>
+<link rel="stylesheet" href="assets/css/style.css">
+
     </head>
 
     <body>
@@ -67,14 +67,50 @@ $resultProduct = mysqli_query($koneksi, "SELECT * FROM `tb_produk` INNER JOIN `t
                             </div>
                         </div>
                         <!-- Featured Products -->
+                        
+            <section class="content">
+                <div class="content-box">
+                    <hr class="separator" />
+                    <h2 class="title">Mengenal Produk Kami</h2>
+                    <hr class="separator" />
 
+                    <div class="justified-text">
+                        <h3 class="section-title">Nikmati Keindahan Perawatan Alami</h3>
+                        <p>
+                            Di <strong>YPA.CO BEAUTY</strong>, kami percaya pada kekuatan alam untuk
+                            merawat kulit Anda dan meningkatkan kilau alami Anda. Produk perawatan
+                            tubuh kami dibuat dengan cermat menggunakan bahan-bahan berkualitas,
+                            memastikan sentuhan lembut namun efektif pada kulit Anda.
+                        </p>
+                    </div>
+
+                <div class="justified-text">
+                <h3 class="section-title">Manjakan diri Anda dengan rangkaian Bodycare kami:</h3>
+                <ul>
+                    <li>
+                        <strong>Body Lotion</strong> mengandung SPF 30+++ yang membantu menjaga
+                        kulit dari paparan sinar matahari yang buruk, moisturizing, brightening,
+                        niacinamide, alpha arbutin, aloe vera, dan honey, melembapkan kulit,
+                        tidak lengket, dan menjadikan kulit sehat, cerah, dan lembut.
+                    </li>
+                    <li>
+                        <strong>Body Scrub</strong> mengandung honey, collagen, hydrogenated
+                        coconut oil, dan citric acid, yang membantu melembapkan kulit,
+                        mencerahkan, dan membersihkan kotoran yang menempel pada kulit,
+                        menjadikan kulit cerah maksimal dan permanen.
+                    </li>
+                    </ul>
+                    </div>
+                </div>
+            </section>
                         <?php
                         require_once 'partikel/main_footer.php'
                         ?>
                     </main>
+
                     <!-- Main Content -->
                 </div>
-
+                
                 <?php
                 require_once 'partikel/footer.php';
                 ?>
